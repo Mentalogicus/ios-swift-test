@@ -19,6 +19,9 @@
 		A242A011224716650021AA34 /* MockNotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242A010224716650021AA34 /* MockNotesDataSource.swift */; };
 		A242A013224716770021AA34 /* INotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242A012224716770021AA34 /* INotesDataSource.swift */; };
 		A242A015224718C60021AA34 /* INotesDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242A014224718C60021AA34 /* INotesDataSourceTests.swift */; };
+		A290EE332248157900064F88 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290EE312248157900064F88 /* NoteTableViewCell.swift */; };
+		A290EE342248157900064F88 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A290EE322248157900064F88 /* NoteTableViewCell.xib */; };
+		A290EE362248359700064F88 /* INotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290EE352248359700064F88 /* INotesPresenter.swift */; };
 		B44803A099F35AE369D5F990 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CF6B26CBD42FD69943494D /* Pods_TestApp.framework */; };
 		F2477A8974DEAC894C89C222 /* Pods_TestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF038A9AE27251054A59BAB8 /* Pods_TestAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		A242A010224716650021AA34 /* MockNotesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotesDataSource.swift; sourceTree = "<group>"; };
 		A242A012224716770021AA34 /* INotesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INotesDataSource.swift; sourceTree = "<group>"; };
 		A242A014224718C60021AA34 /* INotesDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotesDataSourceTests.swift; sourceTree = "<group>"; };
+		A290EE312248157900064F88 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		A290EE322248157900064F88 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		A290EE352248359700064F88 /* INotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotesPresenter.swift; sourceTree = "<group>"; };
 		A7AB0C89470B75CE15C199BA /* Pods-TestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAppTests/Pods-TestAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C613DB446BAD7C10320062DE /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		C684647521EEA4F4B0A83EC0 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 			children = (
 				8429C9DE1EAECD2C004A5E2B /* NotesViewController.swift */,
 				27248B5A223701D000344333 /* NotesPresenter.swift */,
+				A290EE312248157900064F88 /* NoteTableViewCell.swift */,
+				A290EE322248157900064F88 /* NoteTableViewCell.xib */,
+				A290EE352248359700064F88 /* INotesPresenter.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				8429C9D41EAECCA8004A5E2B /* LaunchScreen.storyboard in Resources */,
 				8429C9D11EAECCA8004A5E2B /* Assets.xcassets in Resources */,
 				8429C9CC1EAECCA8004A5E2B /* Main.storyboard in Resources */,
+				A290EE342248157900064F88 /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,11 +395,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A290EE362248359700064F88 /* INotesPresenter.swift in Sources */,
 				8429C9DF1EAECD2C004A5E2B /* NotesViewController.swift in Sources */,
 				8429C9E21EAECD34004A5E2B /* TestApp.xcdatamodeld in Sources */,
 				27248B5B223701D000344333 /* NotesPresenter.swift in Sources */,
 				8429C9C71EAECCA8004A5E2B /* AppDelegate.swift in Sources */,
 				A242A011224716650021AA34 /* MockNotesDataSource.swift in Sources */,
+				A290EE332248157900064F88 /* NoteTableViewCell.swift in Sources */,
 				A23D28112247FF8100457B63 /* Date+Extension.swift in Sources */,
 				8429C9E41EAECD48004A5E2B /* Note.swift in Sources */,
 				A242A013224716770021AA34 /* INotesDataSource.swift in Sources */,

@@ -121,7 +121,7 @@ class INotesDataSourceTests: QuickSpec {
                 for _ in 0...1000 {
                     dispatchGroup.enter()
                     groupQueue.async {
-                        datasource.fetchNotes(completion: { (notes) in
+                        datasource.fetchNotes(completion: { (_) in
                         })
                         datasource.addNote(Note(text: "Allo", date: Date()))
                         success = datasource.deleteNote(at: Int(arc4random_uniform(UInt32(quantity-1))))

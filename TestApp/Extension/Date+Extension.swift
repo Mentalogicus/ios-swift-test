@@ -9,9 +9,12 @@
 import Foundation
 
 extension Date {
+
+    private static let dateFormat = "dd/MM/yyyy HH:mm:ss"
+
     static func fromString(_ string: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        dateFormatter.dateFormat = dateFormat
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let date = dateFormatter.date(from: string)
         return date
@@ -31,5 +34,12 @@ extension Date {
 
         let randomDate = gregorian?.date(byAdding: offsetComponents, to: today, options: .init(rawValue: 0) )
         return randomDate
+    }
+
+    func toString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = Date.dateFormat
+        let dateAsString = formatter.string(from: self)
+        return dateAsString
     }
 }
