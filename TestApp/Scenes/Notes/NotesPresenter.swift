@@ -12,7 +12,7 @@ class NotesPresenter {
     fileprivate var notes: [Note] = []
 
     init(completion: @escaping () -> Void) {
-        noteDatasource.createProceduralNotes(quantity: 100, dayBack: 100)
+        noteDatasource.createProceduralNotes(quantity: 5, dayBack: 100)
         noteDatasource.fetchNotes { (notes) in
             self.notes = notes
             completion()
@@ -44,5 +44,10 @@ extension NotesPresenter: INotesPresenter {
             self.notes = notes
             completion()
         }
+    }
+
+    func addNote(_ text: String) {
+        guard text != "" else { return }
+        noteDatasource.addNote(Note(text: text))
     }
 }

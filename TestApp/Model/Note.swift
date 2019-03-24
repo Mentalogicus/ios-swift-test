@@ -14,6 +14,11 @@ class Note {
         self.text = text
         self.date = date
     }
+
+    init(text: String) {
+        self.text = text
+        self.date = Date()
+    }
 }
 
 extension Note: CustomStringConvertible {

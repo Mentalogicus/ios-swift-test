@@ -22,15 +22,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-NS-ePX">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="20" width="343" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh5-iu-1rB">
+                                <rect key="frame" x="16" y="637" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cX8-Qh-K2P"/>
+                                </constraints>
+                                <state key="normal" title="Add Note"/>
+                                <connections>
+                                    <action selector="addNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHx-Nw-h7r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yh5-iu-1rB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Yc-K1-eAk"/>
                             <constraint firstItem="sfb-NS-ePX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LxV-HS-f4v"/>
+                            <constraint firstItem="sfb-NS-ePX" firstAttribute="bottom" secondItem="yh5-iu-1rB" secondAttribute="top" id="R78-Er-Yet"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sfb-NS-ePX" secondAttribute="trailing" id="cc0-wx-SFD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sfb-NS-ePX" secondAttribute="bottom" id="lPB-w2-CD1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yh5-iu-1rB" secondAttribute="bottom" id="gzl-8k-Tsw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yh5-iu-1rB" secondAttribute="trailing" id="pTB-P2-Ba3"/>
                             <constraint firstItem="sfb-NS-ePX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yuP-Wm-2lY"/>
                         </constraints>
                     </view>
@@ -40,6 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="100.29985007496252"/>
         </scene>
     </scenes>
 </document>

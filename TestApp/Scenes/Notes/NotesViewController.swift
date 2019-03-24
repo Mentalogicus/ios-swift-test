@@ -25,6 +25,9 @@ class NotesViewController: UIViewController {
 
         presenter?.reloadView {
             // Indicate that the data as changed and the view must be reloaded
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         }
     }
 
@@ -32,6 +35,13 @@ class NotesViewController: UIViewController {
         tableView.register(UINib(nibName: "NoteTableViewCell", bundle: nil), forCellReuseIdentifier: "NoteTableViewCell")
         tableView.dataSource = self
         tableView.reloadData()
+    }
+
+    // Mark action
+    @IBAction func addNote(_ sender: Any) {
+        let createNodeViewController = CreateNodeViewController(nibName: "CreateNodeViewController", bundle: nil)
+        createNodeViewController.delegate = self
+        self.present(createNodeViewController, animated: true, completion: nil)
     }
 }
 
@@ -52,5 +62,11 @@ extension NotesViewController: UITableViewDataSource {
         cell.note.text = presenter?.noteTextAtRow(indexPath.row)
         cell.date.text = presenter?.noteDateAtRow(indexPath.row)
         return cell
+    }
+}
+
+extension NotesViewController: ICreateNodeViewControllerDelegate {
+    func notedCreatedWithText(text: String) {
+        presenter?.addNote(text)
     }
 }
