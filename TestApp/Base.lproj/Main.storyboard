@@ -21,8 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-Qq-lmF">
+                                <rect key="frame" x="16" y="20" width="343" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-NS-ePX">
-                                <rect key="frame" x="16" y="20" width="343" height="617"/>
+                                <rect key="frame" x="16" y="76" width="343" height="561"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh5-iu-1rB">
@@ -39,15 +43,19 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yh5-iu-1rB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Yc-K1-eAk"/>
+                            <constraint firstItem="3aH-Qq-lmF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2eb-ql-tyR"/>
                             <constraint firstItem="sfb-NS-ePX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LxV-HS-f4v"/>
+                            <constraint firstItem="3aH-Qq-lmF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pfv-ye-BRn"/>
                             <constraint firstItem="sfb-NS-ePX" firstAttribute="bottom" secondItem="yh5-iu-1rB" secondAttribute="top" id="R78-Er-Yet"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sfb-NS-ePX" secondAttribute="trailing" id="cc0-wx-SFD"/>
+                            <constraint firstItem="3aH-Qq-lmF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dKe-UN-Szc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yh5-iu-1rB" secondAttribute="bottom" id="gzl-8k-Tsw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yh5-iu-1rB" secondAttribute="trailing" id="pTB-P2-Ba3"/>
-                            <constraint firstItem="sfb-NS-ePX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yuP-Wm-2lY"/>
+                            <constraint firstItem="sfb-NS-ePX" firstAttribute="top" secondItem="3aH-Qq-lmF" secondAttribute="bottom" id="yuP-Wm-2lY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="3aH-Qq-lmF" id="CdQ-k3-4BP"/>
                         <outlet property="tableView" destination="sfb-NS-ePX" id="oio-Lf-rGF"/>
                     </connections>
                 </viewController>

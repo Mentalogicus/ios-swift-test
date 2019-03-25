@@ -10,6 +10,7 @@ class NotesViewController: UIViewController {
 
     // MARK: - Variables
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
     var presenter: INotesPresenter?
 
@@ -17,6 +18,8 @@ class NotesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+        searchBar.delegate = self
         presenter = NotesPresenter {
             DispatchQueue.main.async { [weak self] in
                 self?.setupTableView()
@@ -68,5 +71,15 @@ extension NotesViewController: UITableViewDataSource {
 extension NotesViewController: ICreateNodeViewControllerDelegate {
     func notedCreatedWithText(text: String) {
         presenter?.addNote(text)
+    }
+}
+
+extension NotesViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print("Hello")
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.search(by: searchText)
     }
 }

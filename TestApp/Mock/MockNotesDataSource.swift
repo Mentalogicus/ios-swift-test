@@ -27,6 +27,19 @@ class MockNotesDataSource {
         ]
     }
 
+    func createNotesForSearch() {
+        let dayBack = 100
+        notes = [
+            Note(text: "Allo", date: Date.random(daysBack: dayBack) ?? Date()),
+            Note(text: "New note", date: Date.random(daysBack: dayBack) ?? Date()),
+            Note(text: "Bonjour", date: Date.random(daysBack: dayBack) ?? Date()),
+            Note(text: "A list of words", date: Date.random(daysBack: dayBack) ?? Date()),
+            Note(text: "Bonjour je vais bien", date: Date.random(daysBack: dayBack) ?? Date()),
+            Note(text: "Hi you", date: Date.random(daysBack: dayBack) ?? Date()),
+            Note(text: "I need to paint my wagon.", date: Date.random(daysBack: dayBack) ?? Date())
+        ]
+    }
+
     fileprivate func notifyNodeDidChange() {
         let delay = Double.random(in: 0 ..< 0.5)
         dataSourceQueue.asyncAfter(deadline: .now() + delay) { [weak self] in

@@ -15,4 +15,5 @@ protocol INotesPresenter {
     func noteDateAtRow(_ row: Int) -> String
     func reloadView(completion: @escaping () -> Void)
     func addNote(_ text: String)
+    func search(by text: String)
 }

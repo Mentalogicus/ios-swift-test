@@ -28,7 +28,7 @@ extension Date {
         let today = Date(timeIntervalSinceNow: 0)
         let gregorian  = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
         var offsetComponents = DateComponents()
-        offsetComponents.day = Int(day - 1)
+        offsetComponents.day = -Int(day - 1)
         offsetComponents.hour = Int(hour)
         offsetComponents.minute = Int(minute)
 
